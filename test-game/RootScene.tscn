@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://bs0ubyc2upeph"]
+[gd_scene load_steps=3 format=3 uid="uid://bs0ubyc2upeph"]
+
+[ext_resource type="Shader" path="res://RootScene.gdshader" id="1_sodgv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xd2up"]
+shader = ExtResource("1_sodgv")
 
 [node name="Node" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_xd2up")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
