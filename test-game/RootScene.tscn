@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bs0ubyc2upeph"]
 
 [ext_resource type="Shader" path="res://RootScene.gdshader" id="1_sodgv"]
+[ext_resource type="Script" path="res://player.gd" id="2_nyitv"]
 [ext_resource type="Texture2D" uid="uid://n3j5u2vs7qsm" path="res://RUN.png" id="2_tgwfr"]
-[ext_resource type="Script" path="res://character.gd" id="3_vfb55"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xd2up"]
 shader = ExtResource("1_sodgv")
@@ -60,6 +60,7 @@ grow_vertical = 2
 
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(575.5, 314)
+script = ExtResource("2_nyitv")
 
 [node name="Character" type="Sprite2D" parent="Player"]
 texture_filter = 1
@@ -67,7 +68,6 @@ position = Vector2(-575.5, -414)
 scale = Vector2(3.41398, 3.41398)
 texture = ExtResource("2_tgwfr")
 hframes = 8
-script = ExtResource("3_vfb55")
 
 [node name="PlayerAnimation" type="AnimationPlayer" parent="Player/Character"]
 libraries = {
